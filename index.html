@@ -1,86 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nahom Ketema | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nahom Ketema — Developer · Game tinkerer</title>
+  <meta name="description" content="Nahom Ketema — Developer, Game tinkerer, chaos-friendly builder. Portfolio: projects, skills, contact." />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="logo">Nahom<span>Ketema</span></h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-    <section id="hero">
-        <div class="hero-text">
-            <h2>Hi, I’m Nahom 👋</h2>
-            <p>College student, AI/ML tinkerer, web dev explorer, game dev dreamer, and part-time chaos architect.</p>
-            <a href="#projects" class="btn">See My Work</a>
+  <!-- Header -->
+  <header class="topnav" id="header">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">NK</div>
+        <span class="word">Nahom Ketema</span>
+      </div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hambtn" id="hambtn" aria-label="Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="shell">
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="hero-left">
+          <h1 class="name">Nahom Ketema</h1>
+          <p class="tag">Developer · Game tinkerer · Chaos-friendly builder</p>
+          <div class="ctas">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="mailto:nahom@example.com" class="btn secondary" id="email-btn">Contact / Email</a>
+            <a href="resume.pdf" class="btn secondary" target="_blank">Resume (PDF)</a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I’m on a quest to master AI/ML from the math to the code, dabbling in web development, 
-            game dev, and the occasional “why does my code hate me” moments. 
-            Also writing *Dragon’s Bowl*, because why not?
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">Python (ML/AI)</div>
-            <div class="skill">C & Assembly</div>
-            <div class="skill">C++ & SDL2</div>
-            <div class="skill">HTML, CSS, JS</div>
-            <div class="skill">Kotlin (Mobile)</div>
-            <div class="skill">Story Writing</div>
+      <!-- About -->
+      <section id="about" class="about">
+        <h2>About</h2>
+        <p>I ship web apps, tiny games, and dumb experiments. I prefer readable code and ugly truth over toy frameworks.</p>
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-count="40">0</span><span class="stat-label">Hours coding this week</span></div>
+          <div class="stat"><span class="stat-num" data-count="15">0</span><span class="stat-label">Projects shipped</span></div>
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Languages</span></div>
         </div>
-    </section>
+      </section>
 
-    <section id="projects">
+      <!-- Projects -->
+      <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <h3>Airdrop Clone</h3>
-                <p>Custom Linux-to-Android file sharing tool using C/Assembly + Kotlin.</p>
-            </div>
-            <div class="project-card">
-                <h3>AI from Scratch</h3>
-                <p>Implementing perceptrons, regression, and more — without scikit-learn holding my hand.</p>
-            </div>
-            <div class="project-card">
-                <h3>Dragon’s Bowl</h3>
-                <p>Fantasy novel project. Think Hunger Games meets dragon politics.</p>
-            </div>
+          <article class="project-card" data-status="Live">
+            <img src="#" alt="Focus Buddy app preview" loading="lazy">
+            <h3>Focus Buddy</h3>
+            <p>Anti-distraction Pomodoro timer.</p>
+            <div class="tags"><span>JS</span> <span>LocalStorage</span></div>
+          </article>
+          <article class="project-card" data-status="In Progress">
+            <img src="#" alt="ASCII Platformer preview" loading="lazy">
+            <h3>ASCII Platformer</h3>
+            <p>CLI game in C++.</p>
+            <div class="tags"><span>C++</span></div>
+          </article>
+          <article class="project-card" data-status="Live">
+            <img src="#" alt="Color Palette Generator preview" loading="lazy">
+            <h3>Color Palette Generator</h3>
+            <p>Generates color palettes instantly.</p>
+            <div class="tags"><span>JS</span> <span>CSS</span></div>
+          </article>
         </div>
-    </section>
+      </section>
 
-    <section id="contact">
+      <!-- Skills -->
+      <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-card">HTML/CSS</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">Python (ML/AI)</div>
+          <div class="skill-card">C++</div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Got a project, collab idea, or a meme to share? Hit me up!</p>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send</button>
+        <form id="contact-form">
+          <label>Name <input type="text" name="name" required></label>
+          <label>Email <input type="email" name="email" required></label>
+          <label>Message <textarea name="message" required></textarea></label>
+          <button type="submit" class="btn primary">Send</button>
         </form>
-    </section>
+        <div class="social-links">
+          <a href="https://github.com/nacryptoke" target="_blank">GitHub</a>
+        </div>
+        <small>No spam. I read every message.</small>
+      </section>
+    </main>
 
-    <footer>
-        <p>© 2025 Nahom Ketema | Built with sarcasm & caffeine</p>
+    <footer class="footer">
+      <small>© <span id="year"></span> Nahom Ketema — Last updated Aug 2025 — NK 2025</small>
     </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Toast container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
