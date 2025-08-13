@@ -67,6 +67,10 @@ body {
   padding: 0.5rem;
   border-radius: 4px;
 }
+.logo a {
+  color: var(--bg);
+  text-decoration: none;
+}
 .word {
   font-family: var(--font-head);
   font-size: 1.1rem;
@@ -193,8 +197,12 @@ h2 {
   width: 100%;
   border-radius: 4px;
 }
-.project-card h3 {
+.project-card a {
   margin: 0.8rem 0 0.4rem;
+  text-decoration: none;
+  color: #e5e5e5;
+  font-weight: bold;
+  font-size: 18px;
 }
 .tags {
   display: flex;
