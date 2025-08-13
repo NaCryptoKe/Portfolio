@@ -124,6 +124,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.2s, color 0.2s;
+  cursor: pointer;
 }
 .btn.primary {
   background: var(--accent);
@@ -284,11 +285,12 @@ h2 {
   to { opacity: 0; transform: translateY(10px); }
 }
 
-/* Responsive Nav */
+/* Responsive Nav: animation via max-height, not display */
 @media (max-width: 768px) {
   .hambtn {
     display: block;
   }
+
   .nav-links {
     position: absolute;
     top: 100%;
@@ -296,10 +298,26 @@ h2 {
     background: rgba(10,10,10,0.95);
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
-    display: none;
+    padding: 0 1rem;
+    overflow: hidden;
+    max-height: 0;
+    width: calc(100% - 2rem);
+    transition: max-height 280ms ease, opacity 220ms ease, padding 220ms ease;
+    opacity: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
   .nav-links.show {
-    display: flex;
+    max-height: 400px; /* big enough to show the links */
+    opacity: 1;
+    padding: 1rem;
+  }
+
+  /* ensure nav links stack vertically on mobile */
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0.25rem;
   }
 }
